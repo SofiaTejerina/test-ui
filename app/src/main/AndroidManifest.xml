@@ -23,6 +23,7 @@
         <activity android:name=".ViewBindingActivity"/>
         <activity android:name=".FindViewByIdActivity"/>
         <activity android:name=".SyntheticActivity"/>
+        <activity android:name=".JetpackComposeActivity"/>
     </application>
 
 </manifest>

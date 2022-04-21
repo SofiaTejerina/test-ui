@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<MaterialButton>(R.id.synthetic_option).setOnClickListener {
             startActivity(Intent(this, SyntheticActivity::class.java))
         }
+        findViewById<MaterialButton>(R.id.jetpack_compose_option).setOnClickListener {
+            startActivity(Intent(this, JetpackComposeActivity::class.java))
+        }
     }
 
     companion object{
