@@ -28,6 +28,10 @@ class FindViewByIdActivity : AppCompatActivity() {
             text?.text = inputText?.text
         }
 
+        initCharactersList()
+    }
+
+    private fun initCharactersList() {
         recyclerView?.layoutManager = LinearLayoutManager(this)
         recyclerView?.adapter = FindByIdCharacterAdapter(characters)
     }

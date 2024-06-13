@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import com.google.accompanist.glide.rememberGlidePainter
 import com.sofiatejerina.android.testui.MainActivity.Companion.characters
 import com.sofiatejerina.android.testui.adapters.Character
+import java.util.*
 
 class JetpackComposeActivity: ComponentActivity() {
 
@@ -25,6 +26,8 @@ class JetpackComposeActivity: ComponentActivity() {
 
     @Composable
     private fun CharacterCard(character: Character){
+        val errorCodeId = Calendar.getInstance().timeInMillis
+
         Row(modifier = Modifier.padding(all = 8.dp)) {
             Image(
                 painter = rememberGlidePainter(character.image),
@@ -34,6 +37,7 @@ class JetpackComposeActivity: ComponentActivity() {
                 Text(character.name)
                 Text(character.status)
                 Text(character.type)
+                Text(errorCodeId.toString())
             }
         }
         Spacer(modifier = Modifier.size(20.dp))
